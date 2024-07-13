@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Secreto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mensaje Secreto</h1>
+
+    <div id="input-container">
+        <input type="text" id="input-message" placeholder="Escribe tu mensaje aquí">
+        <button onclick="encodeMessage()">Codificar Mensaje</button>
+    </div>
+
+    <div id="message-container"></div>
+    <div id="guess-container" style="display:none;">
+        <input type="text" id="guess-message" placeholder="Adivina el mensaje" disabled>
+        <button id="check-button" onclick="checkGuess()">Comprobar</button>
+        <button id="reference-button" onclick="showReference()">Ver Referencia</button>
+    </div>
+
+    <div id="result"></div>
+    <div id="reference-container" style="display:none;">
+        <img id="reference-image" src="images/ABC.png" alt="Referencia">
+        <button onclick="hideReference()">Ocultar Referencia</button>
+    </div>
+    <button id="new-message-button" onclick="startNewMessage()" style="display:none;">Nuevo Mensaje</button>
+    <script src="script.js"></script>
+</body>
+</html>
